@@ -69,7 +69,7 @@ public class LogBlock extends JavaPlugin
 			config = new Config(this);
 			final File file = new File("lib/mysql-connector-java-bin.jar");
 			if (!file.exists() || file.length() == 0)
-				download(log, new URL("http://diddiz.insane-architects.net/download/mysql-connector-java-bin.jar"), file);
+				download(log, new URL("https://repo.maven.apache.org/maven2/com/mysql/mysql-connector-j/9.4.0/mysql-connector-j-9.4.0.jar"), file);
 			if (!file.exists() || file.length() == 0)
 				throw new FileNotFoundException(file.getAbsolutePath() + file.getName());
 			log.info("[LogBlock] Connecting to " + config.user + "@" + config.url + "...");

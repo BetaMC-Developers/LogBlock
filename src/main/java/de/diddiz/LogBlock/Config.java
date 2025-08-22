@@ -83,7 +83,7 @@ public class Config
 				config.setProperty(e.getKey(), e.getValue());
 		if (!config.save())
 			throw new IOException("Error while writing to config.yml");
-		url = "jdbc:mysql://" + config.getString("mysql.host") + ":" + config.getString("mysql.port") + "/" + config.getString("mysql.database");
+		url = "jdbc:mysql://" + config.getString("mysql.host") + ":" + config.getString("mysql.port") + "/" + config.getString("mysql.database") + "?characterEncoding=utf8";
 		user = config.getString("mysql.user");
 		password = config.getString("mysql.password");
 		delayBetweenRuns = config.getInt("consumer.delayBetweenRuns", 6);
